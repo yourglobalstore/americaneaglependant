@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>American Eagle Pendant</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://i.imgur.com/w1qGLmC.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* Overlay escuro */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 20, 60, 0.65);
+      z-index: 1;
+    }
+
+    /* Caixa de cookies */
+    .cookie-box {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 2px solid #c00;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      padding: 25px;
+      text-align: center;
+      z-index: 2;
+      width: 90%;
+      max-width: 420px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .cookie-box h2 {
+      color: #002868;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .cookie-box p {
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .cookie-box button {
+      background: linear-gradient(90deg, #002868, #bf0a30);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .cookie-box button:hover {
+      background: linear-gradient(90deg, #bf0a30, #002868);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .cookie-box {
+        width: 95%;
+        padding: 20px;
+      }
+      .cookie-box h2 {
+        font-size: 1.1rem;
+      }
+      .cookie-box p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17676368282"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17676368282');
+  </script>
+</head>
+<body>
+
+  <div class="cookie-box" id="cookieBox">
+    <h2>Discover the Power of Freedom</h2>
+    <p>Click below to continue and explore the American Eagle Pendant — a symbol of strength, courage, and unity.</p>
+    <button onclick="acceptCookies()">Continue</button>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      const box = document.getElementById("cookieBox");
+      box.innerHTML = "<p style='color:#002868; font-weight:bold;'>Loading, please wait...</p>";
+      setTimeout(() => {
+        window.location.href = "https://5643cpjezngxek1f-1tutegu8p.hop.clickbank.net/";
+      }, 2000); // Delay de 2 segundos
+    }
+  </script>
+</body>
+</html>
