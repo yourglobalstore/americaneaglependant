@@ -1,105 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>American Eagle Pendant</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: url('https://i.imgur.com/w1qGLmC.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      position: relative;
-    }
-
-    /* Overlay escuro */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(10, 20, 60, 0.65);
-      z-index: 1;
-    }
-
-    /* Caixa de cookies */
-    .cookie-box {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(255, 255, 255, 0.95);
-      border: 2px solid #c00;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      padding: 25px;
-      text-align: center;
-      z-index: 2;
-      width: 90%;
-      max-width: 420px;
-      animation: fadeIn 1.2s ease;
-    }
-
-    .cookie-box h2 {
-      color: #002868;
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-
-    .cookie-box p {
-      color: #333;
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-
-    .cookie-box button {
-      background: linear-gradient(90deg, #002868, #bf0a30);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 25px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .cookie-box button:hover {
-      background: linear-gradient(90deg, #bf0a30, #002868);
-      transform: scale(1.05);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      .cookie-box {
-        width: 95%;
-        padding: 20px;
-      }
-      .cookie-box h2 {
-        font-size: 1.1rem;
-      }
-      .cookie-box p {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>American Eagle Pendant - Strength, Freedom & Unity</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17676368282"></script>
@@ -109,23 +13,190 @@
     gtag('js', new Date());
     gtag('config', 'AW-17676368282');
   </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #fff;
+      background: #000;
+      overflow: hidden;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .hero {
+      height: 100vh;
+      width: 100%;
+      background:
+        linear-gradient(rgba(0,0,30,0.7), rgba(0,0,0,0.7)),
+        url('https://i.imgur.com/w1qGLmC.jpeg')
+        center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 5vw;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: bold;
+      max-width: 900px;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+      background: linear-gradient(90deg, #002868, #bf0a30);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 3vw, 1.3rem);
+      max-width: 750px;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      color: #f2f2f2;
+    }
+
+    /* COOKIE BOX */
+    .cookie-box {
+      position: fixed;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,20,0.85);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      z-index: 9999;
+      animation: fadeIn 1s ease;
+    }
+
+    .cookie-box h2 {
+      color: #fff;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      margin-bottom: 10px;
+    }
+
+    .cookie-box p {
+      margin-bottom: 20px;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .cookie-box button#acceptCookies {
+      background: linear-gradient(90deg, #002868, #bf0a30);
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      padding: 14px 32px;
+      cursor: pointer;
+      transition: transform 0.2s, opacity 0.2s;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      width: 100%;
+      max-width: 250px;
+    }
+
+    .cookie-box button#acceptCookies:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+    /* Close (X) button */
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: #fff;
+      border: none;
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      line-height: 20px;
+      text-align: center;
+      transition: all 0.18s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 10000;
+    }
+
+    .close-btn:hover {
+      background: #e6e6e6;
+      transform: scale(1.08);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, 20px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 0 10px;
+      }
+      .cookie-box {
+        bottom: 30px;
+        padding: 25px 20px;
+        max-width: 95%;
+      }
+      .close-btn {
+        top: 6px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <div class="cookie-box" id="cookieBox">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Discover the Iconic “American Eagle” Pendant</h1>
+    <p>A timeless symbol of freedom, strength, and unity — crafted for those who stand tall and proud under the American spirit.</p>
+  </section>
+
+  <!-- COOKIE BOX -->
+  <div class="cookie-box" id="cookieBox" role="dialog" aria-label="Cookie consent">
+    <button class="close-btn" id="closeBanner" aria-label="Close and continue">✕</button>
     <h2>Discover the Power of Freedom</h2>
-    <p>Click below to continue and explore the American Eagle Pendant — a symbol of strength, courage, and unity.</p>
-    <button onclick="acceptCookies()">Continue</button>
+    <p>Click below to explore the American Eagle Pendant — a symbol of strength, courage, and unity that embodies the heart of America.</p>
+    <button id="acceptCookies">Continue</button>
   </div>
 
+  <!-- SCRIPT -->
   <script>
-    function acceptCookies() {
+    const affiliateLink = "https://5643cpjezngxek1f-1tutegu8p.hop.clickbank.net/";
+
+    function redirectToAffiliate() {
+      // small UX: show loading text then redirect
       const box = document.getElementById("cookieBox");
-      box.innerHTML = "<p style='color:#002868; font-weight:bold;'>Loading, please wait...</p>";
+      box.innerHTML = "<p style='color:#fff; font-weight:bold; text-align:center;'>Loading, please wait...</p>";
       setTimeout(() => {
-        window.location.href = "https://5643cpjezngxek1f-1tutegu8p.hop.clickbank.net/";
-      }, 2000); // Delay de 2 segundos
+        window.location.href = affiliateLink;
+      }, 2000);
     }
+
+    document.getElementById('acceptCookies').addEventListener('click', redirectToAffiliate);
+    document.getElementById('closeBanner').addEventListener('click', redirectToAffiliate);
   </script>
+
 </body>
 </html>
